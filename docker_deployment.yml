@@ -1,0 +1,9 @@
+production:
+  services:
+    web:
+      image: khash/simple_web
+      command: bundle exec rackup -p 3000
+      log_folder: /myapp/log
+      local_ports:
+        - 3000
+      public_port: "80:443"
